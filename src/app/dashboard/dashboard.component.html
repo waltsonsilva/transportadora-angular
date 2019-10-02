@@ -1,0 +1,9 @@
+<h3>Top Transportadoras</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let transportadora of transportadoras" class="col-1-4"
+      routerLink="/detail/{{transportadora.id}}">
+    <div class="module transportadora">
+      <h4>{{transportadora.nome}}</h4>
+    </div>
+  </a>
+</div>

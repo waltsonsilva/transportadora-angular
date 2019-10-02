@@ -1,0 +1,21 @@
+<h2>Transportadoras</h2>
+
+<div>
+  <label>Transportadora:
+    <input #transpNome />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button >
+    Pesquisar
+  </button>
+</div>
+
+<ul class="transportadoras">
+  <li *ngFor="let transportadora of transportadoras">
+    <a routerLink="/detail/{{transportadora.codigod}}">
+      <span class="badge">{{transportadora.codigoId}}</span> {{transportadora.empresa}}
+    </a>
+    <button class="delete" title="delete transportadora" (click)="delete(transportadora)"
+      >x</button>
+  </li>
+  </ul>
